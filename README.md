@@ -1,7 +1,8 @@
 # Task2: Create an EKS cluster using Terraform and deploy an Nginx application on the K8s cluster and access it via the Internet
 We are using AWS as our cloud provider for this taks.
 Manifest files used to achieve this task:
-![image](https://github.com/devclosre/task2/assets/143948725/ec646e8a-ced3-4722-9a93-45f7ffd5f776)
+![image](https://github.com/devclosre/task-two/assets/143948725/ed480600-f0e6-489c-aa62-b439794c8abd)
+
 
 Once we do a terraform apply on these files, an EKS cluster, a Node group with 2 instance and a Bastion host gets created.
 
