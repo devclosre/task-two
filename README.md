@@ -36,36 +36,39 @@ EKS cluster is dependent on the Master Role with above mentioned polices and Nod
 
 We can see the EKS cluster name is EKS-DEMO and status is Active.
 
-![image](https://github.com/devclosre/task2/assets/143948725/40cf3ed5-54a1-45ac-b49c-e61ed9237b2d)
-
+![image](https://github.com/devclosre/task-two/assets/143948725/627a8334-2090-4535-b33f-360e5889f21e)
 
 
 Now we have Node Group, which is considered as Data plane and we have control over it. Actual workloads run on these machines.
 
-![image](https://github.com/devclosre/task2/assets/143948725/d1995745-8ab9-4540-9c02-ed2cb297125b)
+![image](https://github.com/devclosre/task-two/assets/143948725/5c3ec56d-fd96-42eb-90ba-7a1fa10c8bf4)
+
 
 We have two machines in the our Node group
 
 Node1:
 
+![image](https://github.com/devclosre/task-two/assets/143948725/19f1b23d-8d2a-4d78-afbd-7dd613e040ea)
 
-![image](https://github.com/devclosre/task2/assets/143948725/48509ba3-9fca-4f40-bed5-3db32489bc59)
 
 Node2:
 
-
-![image](https://github.com/devclosre/task2/assets/143948725/2d78c295-5b9e-40b1-8663-2c0e9c8278a6)
+![image](https://github.com/devclosre/task-two/assets/143948725/db2c6344-d6ca-48a6-9322-e76b0184b0c5)
 
 
 
 Once the cluster gets created login to Bastion, we have already installed AWS CLI and kubectl using script. 
+
+![image](https://github.com/devclosre/task-two/assets/143948725/2be92f6d-0fc6-466c-a572-b38853003d3c)
+
 
 Now we need to fetch the kubeconfig file using the below command:
 
 # aws eks update-kubeconfig --name EKS-DEMO --region ap-southeast-4
 
 
-![image](https://github.com/devclosre/task2/assets/143948725/d3f745ce-b08a-4110-a788-4f10c7bc3fb5)
+![image](https://github.com/devclosre/task-two/assets/143948725/a82cdab6-7553-4285-88d7-9df737c72f66)
+
 
 Now the kubeconfig file is downloaded using which we can access the API server.
 
@@ -78,21 +81,25 @@ We have two deployment files, one for nginx deployment and one for nginx service
 The files are as follows:
 
 
-![image](https://github.com/devclosre/task2/assets/143948725/a6ee88d3-1e60-4b8d-b576-3012857a001a)
+![image](https://github.com/devclosre/task-two/assets/143948725/008d3142-1c39-4995-977e-d648466765ac)
 
 
-![image](https://github.com/devclosre/task2/assets/143948725/df7881e1-78f0-450b-a446-ed77993cca6a)
+![image](https://github.com/devclosre/task-two/assets/143948725/b9c73fbf-ec74-42c7-8192-484f64360bc7)
+
+
 
 Once we apply these files, Nginx deployment with 2 replicas and Nginx service of type Load Balancer gets created.
 
 
-![image](https://github.com/devclosre/task2/assets/143948725/9a885f9d-c032-4e9a-94f8-9bf7c6ac8bc4)
+![image](https://github.com/devclosre/task-two/assets/143948725/35a7ae54-c9a8-4f55-ae36-0f4e672d68bb)
+
+![image](https://github.com/devclosre/task-two/assets/143948725/948503bd-0505-4208-8f53-37f7e85896f9)
 
 
 We can access our Nginx pod using the dns name of the Load Balancer.
 
 
-![image](https://github.com/devclosre/task2/assets/143948725/fb0a6fd1-ec52-4fd9-89a4-eee37a4fb3cb)
+![image](https://github.com/devclosre/task-two/assets/143948725/c092d819-f4ea-4d6c-a13b-c3f834c374c0)
 
 
 
